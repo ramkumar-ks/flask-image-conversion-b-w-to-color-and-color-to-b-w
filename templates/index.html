@@ -1,0 +1,83 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#ba").click(function(){
+    $(".a").show();
+	$(".b").show();
+	$(".c").hide();
+	$(".d").hide();
+  });
+  $("#bb").click(function(){
+    $(".c").show();
+	$(".d").show();
+	$(".a").hide();
+	$(".b").hide();
+  });
+});
+</script>
+</head>
+	<body>
+		<h1>Image Conversion</h1>
+		<table>
+			<th>
+			<tr>
+			<td>
+			<button id="ba">Convert Color to B&W</button>
+			</td>
+			<td>
+			<button id="bb">Convert B&W to Color</button>
+			</td>
+			</tr>
+			</th>
+		<form class="" action="index" method="post">
+		<table>
+			<th>
+			<tr>
+			<td>
+			<span style="display:none" class="a">Select File:</span>
+			</td>
+			<td>
+			<input style="display:none" class="a" type="file" name="img_file" value={{f}}>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<span style="display:none" class="b">Color to Black & white:</span>
+			</td>
+			<td>
+			<input style="display:none" class="b" type="submit" name="Convert B&W" value="Convert B&W1">
+			
+			</td>			
+			</tr>
+			</th>
+		</table>
+		
+		</form>
+		<form action="color_image" method="post">		
+		<table>
+			<th>
+			<tr>
+			<td>
+			<span style="display:none" class="c">Select File:</span>
+			</td>
+			<td>
+			<input style="display:none" class="c" type="file" name="img_file" value={{f}}>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<tr>
+			<td>
+			<span style="display:none" class="d">Black & white to color:</span>
+			</td>
+			<td>	
+			<input style="display:none" class="d" type="submit" name="Convert Color" value="Convert Color1">
+			</td>
+			</tr>
+			</th>
+		</table>			
+		</form>		
+	</body>
+</html>
